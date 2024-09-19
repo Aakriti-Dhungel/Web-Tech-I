@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 1px;
+        }
+        td{
+            color: blue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+            <fieldset>
+                <legend>Survey Form</legend>
+            <table>
+                <tr>
+                    <th>Contact Information </th>
+                    <th></th>
+  
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email Address:</label>
+                    </td>
+                    <td>
+                        <input type="email"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="firstname">First Name:</label>
+                    </td>
+                        <td>
+                            <input type="text"><br>
+                        </td>
+                </tr>
+                <tr>
+                    <td>
+
+                        <label for="lastname">Last Name:</label>
+                    </td>
+                    <td>
+                        <input type="text"><br><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <th>Geographic Information</th>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="state">State:</label>
+
+                    </td>
+                    <td>
+                        <input type="text"><br>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="zipcode">Zip Code:</label>
+
+                    </td>
+                    <td>
+                        <input type="text"><br><br>
+
+                    </td>
+                </tr>
+            </table>
+            
+            <h4>How did you hear about us</h4>
+            <input type="checkbox"name="websearch" value="Websearch">
+            <label for="websearch">Websearch</label><br>
+            <input type="checkbox" name="facebook" value="Facebook">
+            <label for="facebook" >Facebook</label><br>
+            <input type="checkbox" name="twitter"value="twitter">
+            <label for="twitter">Twitter</label><br>
+            <input type="checkbox" name="email_message" value="email_message">
+            <label for="email_message">Email message</label><br>
+            
+            <h4>Any Suggestions</h4>
+            <textarea name="Suggestions" rows="10" cols="30"></textarea>
+            
+            <h4>Thank You for taking our survey.</h4>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>    
+        </form>
+    </fieldset>
+</body>
+</html>

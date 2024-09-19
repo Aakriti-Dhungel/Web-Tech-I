@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 320px;
+            width: 400px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        .float-right {
+            margin: 10px;
+            float: right;
+            background-color: aliceblue;
+            height: 220px;
+            width: 150px;
+        }
+        .float-left {
+            margin: 10px;
+            float: left;
+            background-color: lightgreen;
+            height: 220px;
+            width: 150px;
+        }
+        .clear {
+            clear: both; 
+            background-color: rgb(218, 116, 116);
+            height: 40px;
+            width: 90%;
+            text-align: center;
+            margin: 10px auto; /* Center the block horizontally and add vertical margins */
+        }
+        p {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="float-right">
+            <p>Floated Right</p>
+        </div>
+        <div class="float-left">
+            <p>Floated Left</p>
+        </div>
+        <p class="clear">This content is cleared on the right.</p>
+    </div>
+</body>
+</html>

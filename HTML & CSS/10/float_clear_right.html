@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 320px;
+            width: 400px;
+            background-color: aqua;
+            border: 2px solid black;
+        }
+        .float-right {
+            margin: 10px;
+            float: right;
+            background-color: aliceblue;
+            height: 200px;
+            width: 200px;
+        }
+        .clear {
+            clear: right; /* Clears floats on both sides */
+        }
+        p{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="float-right">
+            <p>Floated right</p>
+        </div>
+        <p class="clear">This content is cleared on the right.</p>
+    </div>
+</body>
+</html>

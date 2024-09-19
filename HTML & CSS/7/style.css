@@ -1,0 +1,33 @@
+body {
+    margin: 25px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+h3, h4 {
+    margin-top: 0;
+}
+p {
+    margin: 10px 0;
+    text-align: justify;
+}
+.inline-display span{
+    display: inline;
+}
+.inline-block span{
+    display: inline-block;
+}
+.display-block span{
+    display: block;
+}
+.display-flex {
+    display: flex;
+}
+span {
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid green;
+    
+}

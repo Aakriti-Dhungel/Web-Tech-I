@@ -1,0 +1,35 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    
+  }
+  div span{
+    font-size: 40px;
+  }
+  div::first-line {
+    color: green;
+  }
+  
+  div span::before {
+    content: "Hi!,...";
+    color: blue; 
+    font-weight: bold;
+  }
+  
+  .container::first-letter {
+    color: red;
+  }
+  
+  .container::after {
+    content: "...bye!";
+    color: red;
+  }
+  
+  input::placeholder {
+    color: red;
+    font-style: italic;
+  }
+  
+  p::selection {
+    background-color: blue;
+    color: red;
+  }
