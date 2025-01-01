@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Web Page</title>
+    <script type="text/javascript">
+        var myDate = new Date(2015, 1, 15); // Month is 0-indexed (0 = January)
+        var today = new Date();
+        
+        if (myDate > today) {
+            alert("Today is before 15th February 2015");
+        } else {
+            alert("Today is after 15th February 2015");
+        }
+        
+        function displayDate() {
+            document.getElementById("demo").innerHTML = new Date().toString();
+        }
+    </script>
+</head>
+<body>
+    <h1>My First Web Page</h1>
+    <p id="demo">This is a paragraph.</p>
+    <button type="button" onclick="displayDate()">Display Date</button>
+</body>
+</html>

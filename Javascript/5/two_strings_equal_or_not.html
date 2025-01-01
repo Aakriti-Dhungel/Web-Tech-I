@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Comparison</title>
+</head>
+<body>
+    <h1>String Comparison</h1>
+    <input type="text" id="string1" placeholder="Enter first string" />
+    <input type="text" id="string2" placeholder="Enter second string" />
+    <button id="compareButton">Compare Strings</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('compareButton').addEventListener('click', function() {
+            const str1 = document.getElementById('string1').value;
+            const str2 = document.getElementById('string2').value;
+            let resultMessage = '';
+
+            if (str1 === str2) {
+                if (str1 === str1.toUpperCase()) {
+                    resultMessage = "The first string is in uppercase.";
+                } else {
+                    resultMessage = "The first string is not in uppercase.";
+                }
+            } else {
+                resultMessage = "The strings are not equal.";
+            }
+
+            document.getElementById('result').textContent = resultMessage;
+        });
+    </script>
+</body>
+</html>

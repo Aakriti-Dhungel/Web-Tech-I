@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Last Name Example</title>
+</head>
+<body>
+    <h1>Change Last Name</h1>
+    <button id="changeNameButton">Change Last Name</button>
+    <p id="beforeChange"></p>
+    <p id="afterChange"></p>
+
+    <script>
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+
+            // Method to change the last name
+            this.changeLastName = function(newLastName) {
+                this.lastName = newLastName;
+            };
+        }
+
+        // Create a new Person object
+        const person = new Person("John", "Doe");
+
+        // Display before changing last name
+        document.getElementById('beforeChange').textContent = 
+            `Before: ${person.firstName} ${person.lastName}`;
+
+        document.getElementById('changeNameButton').addEventListener('click', function() {
+            // Change the last name to "Smith"
+            person.changeLastName("Smith");
+
+            // Display after changing last name
+            document.getElementById('afterChange').textContent = 
+                `After: ${person.firstName} ${person.lastName}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associative Array Display</title>
+</head>
+<body>
+    <h1>Associative Array Content</h1>
+    <button id="displayButton">Display Content</button>
+    <ul id="result"></ul>
+
+    <script>
+        // Create an associative array (object)
+        const associativeArray = {
+            name: "Aakriti Dhungel",
+            occupation: "Web Developer",
+            city: "Kathmandu"
+        };
+
+        document.getElementById('displayButton').addEventListener('click', function() {
+            const resultList = document.getElementById('result');
+            resultList.innerHTML = ''; // Clear previous results
+
+            // Get keys of the associative array
+            const keys = Object.keys(associativeArray);
+
+            // Use a simple for loop to display content
+            for (let i = 0; i < keys.length; i++) {
+                const key = keys[i];
+                const listItem = document.createElement('li');
+                listItem.textContent = `${key}: ${associativeArray[key]}`;
+                resultList.appendChild(listItem);
+            }
+        });
+    </script>
+</body>
+</html>

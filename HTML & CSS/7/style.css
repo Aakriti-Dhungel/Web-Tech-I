@@ -19,9 +19,6 @@ p {
 .display-block span{
     display: block;
 }
-.display-flex {
-    display: flex;
-}
 span {
     height: 100px;
     width: 100px;
@@ -31,3 +28,6 @@ span {
     border: 1px solid green;
     
 }
+/* .display-flex {
+    display: flex;
+} */

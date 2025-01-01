@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-column Layout with Floats</title>
+    <title>Multi-column Layout</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="column">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id fermentum massa. Vestibulum accumsan lectus non libero fringilla, nec vehicula erat rhoncus. Phasellus ut condimentum dolor, eget eleifend elit. Praesent a erat augue. Quisque venenatis, nulla nec cursus cursus, leo odio consequat felis, a fermentum lorem mi a nisl.</p>
-        </div>
-        <div class="column">
-            <p>Vivamus interdum euismod libero, a dapibus est volutpat eu. Sed efficitur, libero non facilisis fermentum, ante nisi fermentum velit, id vulputate odio risus ac libero. Aliquam erat volutpat. Phasellus mollis metus a urna gravida, id facilisis dolor tempor.</p>
-        </div>
-        <div class="column">
-            <p>Maecenas auctor, mauris vel tempus varius, risus lacus vehicula arcu, nec dapibus sem erat nec nunc. Nam eget orci nec lacus fermentum fringilla. Duis vel cursus nisi, et suscipit urna. Sed sit amet sapien vel nulla posuere tincidunt.</p>
-        </div>
- 
-       
-    </div>
+    <style>
+        p {
+         column-count: 3;
+         column-gap: 20px;
+         column-rule: 2px solid black;
+        }
+     </style>
+ </head>
+ <body>
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores aperiam tempora in voluptas praesentium excepturi, voluptate quaerat porro magnam, facere illum facilis atque quisquam ipsum assumenda cupiditate. Saepe dolore, quasi, maiores aliquam ad maxime sunt quam ducimus qui ea quo ipsa rerum nihil consequuntur. Magnam tempora consectetur commodi quod pariatur voluptas consequuntur in animi eligendi, illo beatae nemo fugit odit, asperiores neque? Quidem illo quia at non exercitationem cupiditate, ab voluptate minima ut eius natus hic error quae, doloremque beatae, voluptatibus animi. Officiis explicabo, consequatur, iusto nemo iure voluptate nam deserunt quaerat repellat tempore harum rem necessitatibus cupiditate! Adipisci, asperiores.</p>
 </body>
 </html>

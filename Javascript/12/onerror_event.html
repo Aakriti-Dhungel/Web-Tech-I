@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling Example</title>
+    <script type="text/javascript">
+        // Global error handler
+        window.onerror = function(msg, url, line) {
+            var errorText = "Error Displayed\n\n";
+            errorText += "Error: " + msg + "\n";
+            errorText += "URL: " + url + "\n";
+            errorText += "Line Number: " + line + "\n\n";
+            errorText += "Click OK to continue.\n\n";
+            alert(errorText);
+            return true; // Prevent the default browser error handler
+        };
+
+        function display(){
+            addlert("Click to Proceed!!!!");
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="View message" onclick="display()" />
+</body>
+</html>
