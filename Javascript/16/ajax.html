@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX JSON</title>
+</head>
+<body>
+    <h3>JSON Data</h3>
+    <div id="json-content"></div>
+
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "data.json", true);
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                let jsonData = JSON.parse(xhr.responseText);
+                let output = `<h4>${jsonData.name}</h4>
+                              <ul>
+                                  <li>Age: ${jsonData.age}</li> <!-- Corrected to 'age' -->
+                                  <li>Email: ${jsonData.email}</li> 
+                                  <li>Profession: ${jsonData.profession}</li>
+                                  <li>Country: ${jsonData.country}</li> 
+                              </ul>`;
+                document.getElementById("json-content").innerHTML = output;
+            }
+        };
+        xhr.send();
+    </script>
+</body>
+</html>

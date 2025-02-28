@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Form</title>
+    <script type="text/javascript">
+        function validateForm() {
+            // Get form values
+            var email = document.getElementById('email').value;
+            var phone = document.getElementById('phone').value;
+            var password = document.getElementById('password').value;
+
+            // Email validation
+            var emailPattern = /^[\w\-\.\+]+@(gmail\.com|hotmail\.com)$/i;
+            if (!emailPattern.test(email)) {
+                alert("Invalid email! Must be @gmail.com or @hotmail.com.");
+                return false;
+            }
+
+            // Phone validation
+            var phonePattern = /^(9841|9851)\d{6}$|^980\d{7}$/;
+            if (!phonePattern.test(phone)) {
+                alert("Invalid phone number! Must be in the format: NTC (9841/9851 followed by 6 digits) or NCELL (980 followed by 7 digits).");
+                return false;
+            }
+
+            // Password validation
+            var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+            if (!passwordPattern.test(password)) {
+                alert("Invalid password! Must contain at least one capital letter, one small letter, one number, one special symbol, and be at least 6 characters long.");
+                return false;
+            }
+
+            alert("All inputs are valid!");
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <h1>Validation Form</h1>
+    <form onsubmit="return validateForm()">
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email" required><br><br>
+        
+        <label for="phone">Phone Number:</label><br>
+        <input type="tel" id="phone" name="phone" required pattern="^(9841|9851)\d{6}$|^980\d{7}$" title="Format: NTC (9841/9851XXXXXX) or NCELL (980XXXXXXX)"><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

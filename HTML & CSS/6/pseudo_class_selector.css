@@ -1,0 +1,23 @@
+a:hover{
+    color: grey;
+    border-bottom: 1px solid blue;
+}
+a{
+    text-decoration: none;
+}
+.input-field input[type="text"]:focus,
+.input-field input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.input-field input[type="submit"]:active {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.input-field input[type="submit"]:hover {
+    background-color: #d4d4d4;
+}

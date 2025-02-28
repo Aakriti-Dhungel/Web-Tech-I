@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Read File </title>
+</head>
+<body>
+    <h4>Read and Render File Content</h4>
+    <div id="file-content"></div>
+
+    <script>
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "bkt.txt", true); 
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                document.getElementById("file-content").innerHTML = xhr.responseText;
+            }
+        };
+        xhr.send();
+    </script>
+</body>
+</html>

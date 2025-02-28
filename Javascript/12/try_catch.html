@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division by Zero Example</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function divideByZeroExample() {
+            var numerator = 10;
+            var denominator = 0;
+            try {
+                if (denominator === 0) {
+                    // Throw a custom error
+                    throw new Error("Cannot divide by zero");
+                }
+                var result = numerator / denominator;
+                document.write("Result: " + result);
+            } catch (error) {
+                // Catch and handle the custom error
+                document.write("Error: " + error.message + "<br>");
+            } finally {
+                // Code in the finally block always executes
+                document.write("Finally block executed");
+            }
+        }
+
+        // Call the function when the page loads
+        window.onload = divideByZeroExample;
+    </script>
+</body>
+</html>

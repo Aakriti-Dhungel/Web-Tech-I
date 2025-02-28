@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    .container, .container1, .container2 {
+      width: 290px;
+      height: 100px;
+      border: 2px solid #000;
+      background-color: aqua;
+      position: relative;
+      margin-bottom: 90px; /* Add space below each container */
+    }
+    .container {
+      overflow: visible;
+    }
+    .container1 {
+      overflow: hidden;
+    }
+    .container2 {
+      overflow: scroll;
+    }
+    .content {
+      width: 320px;
+      height: 150px;
+      background-color: rgb(223, 113, 113);
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      This is some content that will overflow the container. 
+      <h4>Overflow Visible</h4>
+    </div>
+  </div>
+  <div class="container1">
+    <div class="content">
+      This is some content that will overflow the container.
+      <h4>Overflow Hidden</h4>
+    </div>
+  </div>
+  <div class="container2">
+    <div class="content">
+      This is some content that will overflow the container.
+      <h4>Overflow Scroll</h4>
+    </div>
+  </div>
+</body>
+</html>

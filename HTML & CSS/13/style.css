@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  table{
+    width: 100%;
+    margin: 0px;
+  }
+  .header{
+    height: 100px;
+    background-color: grey;
+    font-size: 40px;
+    font-family: 'Times New Roman';
+
+  }
+  .main-content{
+    height: 150px;
+  }
+  img[src]{
+    height: 50px;
+    width: 50px;
+  }
+  .sidebar{
+    text-align: center;
+    width: 50%;
+    background-color: #e6e0e0;
+  }
+  .footer{
+    text-align: center;
+    background-color: #242424;
+    color: white;
+    height: 150px;
+    
+  }
+  .footer h2{
+    margin-bottom: 1px;
+  }

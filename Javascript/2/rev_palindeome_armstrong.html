@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Properties</title>
+</head>
+<body>
+    <h1>Number Properties Checker</h1>
+    <input type="number" id="userInput" placeholder="Enter a number" />
+    <button id="checkButton">Check Number</button>
+    <p id="result"></p>
+
+    <script>
+        document.getElementById('checkButton').addEventListener('click', function() {
+            const inputNumber = parseInt(document.getElementById('userInput').value);
+            const reversedNumber = reverseNumber(inputNumber);
+            const isPalindrome = (inputNumber === reversedNumber);
+            const isArmstrong = checkArmstrong(inputNumber);
+
+            document.getElementById('result').textContent = `
+                Reversed Number: ${reversedNumber}
+                Palindrome: ${isPalindrome}
+                Armstrong Number: ${isArmstrong}
+            `;
+        });
+
+        function reverseNumber(num) {
+            let reversed = 0;
+            while (num > 0) {
+                reversed = (reversed * 10) + (num % 10);
+                num = Math.floor(num / 10);
+            }
+            return reversed;
+        }
+
+        function checkArmstrong(num) {
+            const digits = num.toString().length;
+            let sum = 0;
+            let temp = num;
+
+            while (temp > 0) {
+                const digit = temp % 10;
+                sum += Math.pow(digit, digits);
+                temp = Math.floor(temp / 10);
+            }
+
+            return sum === num;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* Basic reset and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.fixed-bg {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('./image1.jpg'); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.local-bg {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('./image2.jpg');
+    background-attachment: local;
+    background-size: cover;
+    background-position: center;
+    overflow: auto;
+}
+.scrollable-content {
+    height: 1500px; 
+    padding: 20px;
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+.content {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    text-align: center;
+    color: #333;
+}
+
+.content h1, .content h2 {
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 18px;
+}

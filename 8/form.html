@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Personal Car Information</legend>
+        <form action="#">
+            <label for="fullname">Full Name: </label>
+            <input type="text" placeholder="Enter Your name"><br>
+            <label for="currentcity">Current City: </label>
+            <input type="text" placeholder="Enter Your Current City"><br>
+            <label for="fullname">Email: </label>
+            <input type="email" placeholder="Enter Your email"><br>
+            <label for="phone">Phone: </label>
+            <input type="phone" placeholder="NTC number" pattern="/^(9841 | 9849 | 9851)\d{6}$/"><br>
+            <label for="gender">Gender: </label>
+            <input type="radio" name="gender" value="Male">Male
+            <input type="radio" name="gender" value="Female">Female<br>
+            <label for="birthday">Birthday: </label>
+            <input type="date" type=""><br>
+            <label for="car">Choose Car Information</label>
+            <select>
+            <optgroup label="ABC">
+                <option value="">A</option>
+                <option value="">B</option>
+                <option value="">C</option>
+            </optgroup>
+            <optgroup label="XYZ">
+                <option value="">X</option>
+                <option value="">Y</option>
+                <option value="">Z</option>
+            </optgroup>
+        </select><br><br>
+
+        <label for="additionalinfo" >Additional Information:</label><br>
+        <textarea name="" id="" rows="7" cols="25"></textarea>
+        <br><br>
+        <input type="checkbox" name="accept" name="reject" id=""> <label for="terms">I agree with all terms and condition</label>
+        <br><br>
+
+        <input name="acccept" type="submit" value="submit">
+        <input type="reset" value="reset" name="reject">
+        </form>
+    </fieldset>
+</body>
+</html>

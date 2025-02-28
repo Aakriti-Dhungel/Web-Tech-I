@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function startTime() {
+      // Create a new Date object, which represents the current date and time.
+      var today = new Date();
+      // Extract the hours, minutes, and seconds from the Date object.
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      // Get the element with the ID 'displayClock' from the HTML document.
+      // Update the innerHTML of that element to show the current time in the format: "hours:minutes:seconds".
+      var ampm = h >= 12 ? 'PM' : 'AM';
+      document.getElementById('displayClock').innerHTML = h + ":" + m + ":" + s +" "+ampm;
+      // Set a timeout to call the startTime() function again after 1000 milliseconds (1 second).
+      // This creates a continuous loop, updating the displayed time every second.
+      t = setTimeout('startTime()', 1000);
+      }
+    </script>
+    <style>
+        #displayClock {
+            font-size: 24px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin-top: 20px;
+        }
+    </style>
+  </head>
+  <body onload="startTime()">
+    <div id="displayClock"></div>
+  </body>
+</html>
